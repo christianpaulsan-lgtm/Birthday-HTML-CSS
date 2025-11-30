@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birth to My Greatest Achiever</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    .balloon {
+      position: absolute;
+      top: -100px;
+      font-size: 2.5em;
+      animation: fall 8s linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0.8; }
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .balloon:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .balloon:nth-child(4) { left: 70%; animation-delay: 6s; }
+    .balloon:nth-child(5) { left: 85%; animation-delay: 1s; }
+
+    .card-container {
+      perspective: 1000px;
+      z-index: 10; 
+    }
+    .card {
+      width: 350px;
+      height: 500px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+    .card-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.9);
+    }
+    .card-img {
+      max-width: 100%;  
+      height: 250px;     
+      border-radius: 5px;
+      margin: 10px auto;
+      display: block;   
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card-front {
+      background: #fff;
+    }
+
+    .card-front h1 {
+      color: #ff6f61;
+      font-size: 2.2em;
+      margin-top: 50px;
+    }
+
+    .card-front .balloons {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    .card-back {
+      background: #ffeaa7;
+      transform: rotateY(180deg);
+    }
+
+    .card-back h2 {
+      color: #2d3436;
+      margin-top: 50px;
+      font-size: 1.8em;
+    }
+
+    .card-back p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 20px;
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  <div class="balloon">🎈</div>
+  
+  <div class="card-container">
+    <div class="card">
+     
+      <div class="card-side card-front">
+        <h1>🎂 Happy Birthday Grace Shella!</h1>
+        <div class="balloons">🎉🎁</div>
+        <p>Enjoy your day with love, laughter, and unforgettable memories.</p>
+      </div>
+      
+      <div class="card-side card-back">
+        <h2>💌 A Special Wish</h2>
+        <p>May your year ahead be filled with joy, success, and endless celebrations. Please smile always!</p>
+        <p class="signature">— Niichan</p>
+        <img src="Birthday gurl.jpg" alt="Birthday Image" class="card-img">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
